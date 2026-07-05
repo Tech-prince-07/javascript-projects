@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>colorChanger</title>
+
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Heading */
+.heading {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    background-color: aqua;
+}
+
+/* Button container */
+.btns {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Common box style */
+.btns span {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    border: 2px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Individual colors */
+.grey {
+    background-color: grey;
+}
+
+.blue {
+    background-color: blue;
+    color: white;
+}
+
+.green {
+    background-color: green;
+    color: white;
+}
+
+.red {
+    background-color: red;
+    color: white;
+}
+
+#refresh {
+    margin-top: 45px;
+    display: inline-block;
+    width: 100px;
+    height: 45px;
+    line-height: px;
+    border: 2px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: lavenderblush;
+}
+    </style>
+
+
+</head>
+<body>
+    <div class="heading">
+        COLOR-CHANGER
+    </div>
+    <div class="btns">
+        <span class="grey"> grey</span>
+        <span class="blue">blue</span>
+        <span class="green">green</span>
+        <span class="red">red</span>
+    </div>
+
+    <span id="refresh">Refresh the page</span>
+
+    <script>
+        let grey = document.querySelector('.grey')
+        let blue = document.querySelector('.blue')
+        let green = document.querySelector('.green')
+        let red = document.querySelector('.red')
+        let refresh = document.querySelector('#refresh')
+
+        grey.addEventListener("click", ()=>{
+            document.body.style.backgroundColor = "grey"
+        })
+
+        blue.addEventListener("click", ()=>{
+            document.body.style.backgroundColor = "blue"
+        })
+
+        green.addEventListener("click", ()=>{
+            document.body.style.backgroundColor = "green"
+        })
+
+        red.addEventListener("click", ()=>{
+            document.body.style.backgroundColor = "red"
+        })
+        refresh.addEventListener("click", ()=>{
+            document.body.style.backgroundColor = "white"
+        })
+
+
+    </script>
+</body>
+</html>
